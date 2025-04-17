@@ -1,0 +1,19 @@
+{
+  "name": "cloud-console-colorize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint *.js popup/*.js",
+    "format": "prettier --write *.js popup/*.js popup/*.css popup/*.html",
+    "format:check": "prettier --check *.js popup/*.js popup/*.css popup/*.html"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1"
+  }
+}

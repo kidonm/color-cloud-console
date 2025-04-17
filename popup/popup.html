@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <span id="title" class="title">Cloud Console Color</span>
+    <span id="project-name" class="project-name"></span>
+    <div id="color-bar" class="color-bar">
+      <div class="color-swatch red" title="Red" data-color="#e57373"></div>
+      <div
+        class="color-swatch yellow"
+        title="Yellow"
+        data-color="#ffd54f"
+      ></div>
+      <div class="color-swatch blue" title="Blue" data-color="#64b5f6"></div>
+      <div class="color-swatch green" title="Green" data-color="#81c784"></div>
+      <div class="swatch-divider"></div>
+      <div
+        class="color-swatch picker"
+        id="picker-swatch"
+        title="Custom color"
+        data-color=""
+      ></div>
+    </div>
+    <div id="color-picker-grid" class="color-picker-grid" style="display: none">
+      <div class="color-grid-section">
+        <span class="grid-section-title">Color</span>
+        <div class="color-grid-colors">
+          <div
+            class="color-grid-swatch"
+            data-color="#f48fb1"
+            style="background-color: #f48fb1"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#ce93d8"
+            style="background-color: #ce93d8"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#9fa8da"
+            style="background-color: #9fa8da"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#80cbc4"
+            style="background-color: #80cbc4"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#aed581"
+            style="background-color: #aed581"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#fff176"
+            style="background-color: #fff176"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#ffb74d"
+            style="background-color: #ffb74d"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#ff8a65"
+            style="background-color: #ff8a65"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#a1887f"
+            style="background-color: #a1887f"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#90a4ae"
+            style="background-color: #90a4ae"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#e0e0e0"
+            style="background-color: #e0e0e0"
+          ></div>
+          <div
+            class="color-grid-swatch"
+            data-color="#78909c"
+            style="background-color: #78909c"
+          ></div>
+        </div>
+      </div>
+      <div class="color-grid-shades disabled">
+        <span class="grid-section-title">Shade</span>
+        <div class="shade-swatches">
+          <div class="shade-swatch" data-shade="lighter" title="Lighter"></div>
+          <div class="shade-swatch" data-shade="default" title="Default"></div>
+          <div class="shade-swatch" data-shade="darker" title="Darker"></div>
+        </div>
+      </div>
+    </div>
+    <button class="clear-button" id="clear-button" title="Clear color">
+      Clear
+    </button>
+    <div class="expander">
+      <div id="projects-table" class="projects-table" style="display: none">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Color</th>
+            </tr>
+          </thead>
+          <tbody id="projects-body"></tbody>
+        </table>
+      </div>
+      <button
+        id="expander-button"
+        class="expander-button"
+        title="Show configured projects"
+      >
+        Settings <span class="caret"></span>
+      </button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
